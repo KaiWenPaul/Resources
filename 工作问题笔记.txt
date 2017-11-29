@@ -1,0 +1,61 @@
+1，angular 用来解析html标签，通过调用$sce服务来实现展示
+   $sce.trustAsHtml(text)；
+  <div class="col-md-12 ng-binding" ng-bind-html="item.content ">
+2. Unexpected token o in JSON at position 1
+   原因是返回的数据已经是object类型，不需要再进行JSON.parse()转换了，可以直接当作对象使用
+3. css样式出现省略号
+   white-space:nowrap;
+   text-overflow:ellipsis;
+   overflow: hidden;
+   三者缺一不可
+4. 让img图片在盒子里水平垂直居中
+   div{
+      display:table-cell;
+      text-align: center;
+      vertical-align: middle;
+     }
+    img{
+      max-width:100%;
+      max-height:100%;
+     }
+5.join（）数组转字符串
+  split（）字符串转数组
+
+6.获取url后面的参数
+ 
+   function getQueryVariable(variable)
+     {
+       var query = window.location.search.substring(1);
+       var vars = query.split("&");
+       for (var i=0;i<vars.length;i++) {
+               var pair = vars[i].split("=");
+               if(pair[0] == variable){return pair[1];}
+       }
+       return(false);
+     }
+7.删除替代一些字符串可以用replace()方法
+
+8.encodeURL（）不会对这些字符编码  ! @ # $& * ( ) = : / ; ? + '
+  encodeURLCcomponent() 不会对这些字符编码 ! * ( ) '
+  对于url传递的参数值用 encodeURLComponent()进行编码，decodeURIComponent()进行解码
+  对于整个url用encodeURL（）进行编码，decodeURL（）进行解码
+9.git提交远程代码示例：
+
+   配置用户名和密码
+   git config --global user.email "youremail@email.com"
+   git config --global user.name "yourname"
+
+   提交步骤
+   git status  查看当前的变化
+   git add .  (-A所有更改都提交)
+   git commit -m"提交说明"
+   git push
+
+10.str.startWith() 用于判断字符串头部
+
+   str.endWith()  用于判断字符串的尾部
+ 
+  例：var str = "json={"name":"paul"}"
+      if(str.startWith('json=')){
+         console.log(123)
+      }
