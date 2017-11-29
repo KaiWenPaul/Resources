@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+</head>
+<body>
+	<div id="app">
+		<p>{{className}}</p>
+		<p v-text='className'></p>
+		<div v-html='btn'></div>
+		<div>{{{btn}}}</div>
+	</div>
+
+<script src="vue.js"></script>
+<script>
+	var vm = new Vue({
+		el: '#app',
+		data: {
+			className: '北801',
+			btn: '<button>这是个按钮</button>'
+		}
+	})
+	
+	
+</script>
+</body>
+</html>

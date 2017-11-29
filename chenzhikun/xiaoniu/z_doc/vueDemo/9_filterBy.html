@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+</head>
+<body>
+	<div id="app">
+	  <input v-model="str">
+	  <ul>
+	    <li v-for="user in users | filterBy str in 'age'">
+	      {{ user.name }}
+	    </li>
+	  </ul>
+	</div>
+	
+	
+	
+	
+	<script src="vue.js"></script>
+	<script>
+		var vm = new Vue({
+			el: '#app',
+			data: {
+				// 根据str过滤列表
+				str: '',
+			    users: [
+			      { name: 'Bruce' ,age:20},
+			      { name: 'Chuck',age:12 },
+			      { name: 'Jackie' ,age:30}
+			    ]
+			}
+		})
+	</script>
+</body>
+</html>

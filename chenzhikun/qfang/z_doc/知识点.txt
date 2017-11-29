@@ -1,0 +1,31 @@
+一,相关资源
+1,原生ajax和jQuery封装后的ajax
+2,JSON格式数据(json序列化)
+对象转化为json字符串 JSON.stringify(对象)
+json字符串转化为对象 JSON.parse(json字符串);
+3,用ajax请求后台数据时错误的原因:
+1)网络异常
+2)服务器出问题
+3)服务器返回的json数据格式有误
+4,英雄角色列表接口地址:
+http://jehovah.com.cn/interface/other/queryHeroList.php
+5,q房网接口和接口文档
+接口文档和需求演示: http://jehovah.com.cn/ 
+列表页面接口地址:
+http://jehovah.com.cn/qfang/qfangList.php
+详情页面接口地址: 
+http://jehovah.com.cn/qfang/qfangDetail.php
+
+
+二,用原生js开发q房网步骤: (ajax除外)
+1,把静态页面拷贝到我们的项目,检查css样式有没有问题
+2,加载所需要的框架和我们自己的js,检查js有没有成功加载
+3，请求后台数据 (如果需要)
+4,绑定事件
+5，把静态页面清空(需要变动态的那部分)，通过JS把后台请求回来的数据变成动态的HTML字符串，填充到页面响应的位置。
+
+三,相关知识点
+1,js获取url后面的参数(百度搜索)
+2,编码解码 encodeURIComponent decodeURIComponent
+
+

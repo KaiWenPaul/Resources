@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="avalon.js"></script>
+</head>
+<body ms-controller="root">
+<input ms-duplex="userName"><br>
+<p>{{userName}}</p>
+<ul>
+	<li ms-repeat="list">{{el}}</li>
+</ul>
+
+
+
+<script>
+    var vm = avalon.define({
+        $id: 'root',
+        userName: '张三',
+        list: ['玫瑰花', '梅花', '菊花', '水仙花']
+    });
+    avalon.scan();
+    
+    var list = ['月季', '牡丹', '百合', '随便花', '任意花'];
+    vm.list = list;
+    
+</script>
+</body>
+</html>

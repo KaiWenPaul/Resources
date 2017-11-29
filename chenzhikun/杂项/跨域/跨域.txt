@@ -1,0 +1,9 @@
+跨域的三种方式:
+1) chrome设置跨域
+2) 服务器设置跨域
+3) jsonp
+4) 其他
+
+1) 浏览器跨域: 谷歌浏览器跨域 Access-Control-Allow-Origin --disable-web-security --user-data-dir=D:\web16066
+2) 服务器跨域: header("Access-Control-Allow-Origin:*"); // 了解
+	

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<!-- saved from url=(0038)index.html -->
+<html>
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>小牛在线</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<meta content="yes" name="apple-mobile-web-app-capable">
+		<meta content="black" name="apple-mobile-web-app-status-bar-style">
+		<meta content="telephone=no" name="format-detection">
+		<meta http-equiv="Expires" content="-1">
+		<meta http-equiv="Cache-Control" content="no-cache">
+		<meta http-equiv="Pragma" content="no-cache">
+		<meta name="wap-font-scale" content="no">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="renderer" content="webkit|ie-comp|ie-stand">
+		<meta name="keywords" content="">
+		<meta name="description" content="">
+		<link rel="stylesheet" href="css/home.css" />
+		<link rel="stylesheet" type="text/css" href="swiper/swiper.min.css"/>
+	</head>
+
+	<body id="app" ms-controller="app">
+		<input type="hidden" value="0" id="startTimeOfBouns">
+		<input type="hidden" value="1450454400000" id="endTimeOfBouns">
+		<input type="hidden" value="true" id="noticeSwitch">
+		<header class="page-header" id="pageHeader">
+			<div class="page-header-logo">
+				<a href="./index_more_files/index_more.html"></a>
+			</div>
+			<div class="page-header-bar">
+
+				<a href="javascript:void(0);"><span></span><i>我的账户</i></a>
+
+			</div>
+		</header>
+		<section class="page-container" id="pageContainer" style="padding-bottom: 0px;">
+			<div class="index-banner swiper-container" id="banner" style="visibility: visible;">
+				<!--轮播图-->
+				<ul style="width: 3840px;" class="swiper-wrapper">					
+					<li class="swiper-slide" ms-repeat="imgList">
+						<a><img ms-attr-src="el" width="100%" style="display: inline;" ></a>
+					</li>
+				</ul>
+				<div class="swiper-pagination"></div>
+				<!--<div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>-->
+				<div class="indicator">
+					<ul>
+						<li class=""></li>
+						<li class=""></li>
+						<li class="on"></li>
+						<li class=""></li>
+						<li class=""></li>
+						<li class=""></li>
+					</ul>
+				</div>
+				<div class="indicator">
+					<ul>
+						<li class="on"></li>
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+					</ul>
+				</div>
+			</div>
+			<div class="index-marquee">
+				<div class="inner" data-marquee="[object Object]">
+					<ul style="transform:translateY(-50%);-webkit-transform:translateY(-50%)">
+						<li>
+							<a href="javascript:void(0);">[意见反馈创刊号]最niu用户获奖名单</a>
+						</li>
+						<li>
+							<a>关于天天牛调整年化收益率的公告</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="index-list" id="indexList">
+				<header class="index-title">热门推荐</header>
+				<!--<section ms-repeat="prdList" class="product-item " ms-visible="$index<5">
+					<header> <strong title="安车信D20160328-713" ms-text="el.prdName"></strong><span></span> </header>
+					<dl> 
+						<dt class="layout-flex"> <span class="orange" ms-text="el.annualYield"></span> <span ms-text="el.startTime"></span> <span ms-text="el.remainAmount"></span> </dt>
+						<dd class="layout-flex"> <span>预期年化收益</span> <span>期限</span> <span id="productColumn276016" data-ctd-end="剩余金额（元）">剩余金额（元）</span></dd>
+					</dl>
+				</section>-->
+				<section ms-repeat="prdList" ms-class="product-item-complete:el.sellOut==='Y'" ms-visible="$index<5" class="product-item">
+					<div ms-visible="el.novice==='Y'&&el.sellOut!=='Y'" class="icon-list icon-new">新手</div>
+					<header> <strong title="安车信D20160328-713" ms-text="el.prdName"></strong>
+						<span ms-visible="el.sellOut==='Y'">（已售罄）</span>
+					</header>
+					 <!--卖完--> 
+					<dl ms-visible="el.sellOut=='Y'"> <dt class="layout-flex"> <span class="orange" ms-text="el.annualYield"></span>
+						<span ms-text="item.term"></span> <span ms-text="el.startTime"></span> </dt>
+						<dd class="layout-flex"> <span>预期年化收益</span> <span>期限</span> <span>起息时间</span></dd>
+					</dl>
+					 <!--没卖完--> 
+					<dl ms-visible="el.sellOut!='Y'"> <dt class="layout-flex"> <span class="orange" ms-text="el.annualYield"></span>
+						<span ms-text="el.term"></span> <span ms-text="el.remainAmount"></span> </dt>
+						<dd class="layout-flex"> <span>预期年化收益</span> <span>期限</span>
+							<span id="productColumn276016" data-ctd-end="剩余金额（元）">剩余金额（元）</span></dd>
+					</dl>
+				</section>
+				<div id="productListMore" style="display: none;">
+					
+					
+					
+					<section ms-repeat="prdList" ms-class="{'product-item-complete':el.sellOut==='Y'}" ms-if="$index>=5" class="product-item">
+					<div ms-if="el.novice==='Y'&&item.sellOut!=='Y'" class="icon-list icon-new">新手</div>
+					<header> <strong title="安车信D20160328-713" ms-text="el.prdName"></strong>
+						<span ms-if="el.sellOut==='Y'">（已售罄）</span>
+					</header>
+					 <!--卖完--> 
+					<dl ms-if="el.sellOut=='Y'"> <dt class="layout-flex"> <span class="orange" ms-text="el.annualYield"></span>
+						<span ms-text="el.term"></span> <span ms-text="el.startTime"></span> </dt>
+						<dd class="layout-flex"> <span>预期年化收益</span> <span>期限</span> <span>起息时间</span></dd>
+					</dl>
+					 没卖完 
+					<dl  ms-if="el.sellOut!='Y'"> <dt class="layout-flex"> <span class="orange" ms-text="el.annualYield"></span>
+						<span ms-text="el.term"></span> <span ms-text="el.remainAmount"></span> </dt>
+						<dd class="layout-flex"> <span>预期年化收益</span> <span>期限</span>
+							<span id="productColumn276016" data-ctd-end="剩余金额（元）">剩余金额（元）</span></dd>
+					</dl>
+				       </section>
+				</div>
+				<section class="product-list-more" ms-click="getMore">点击加载更多</section>
+				<div class="index-nav"> <header class="index-title">项目类别</header>
+		            <ul class="clearfix">
+		               <li ms-repeat="projectList" v-on:click="toDetail(el.id)">
+		                    <a href="tiantianniu.html?id={{el.id}}">{{el.prdName}}<span>
+		                        <em ms-if="(el.sellOut=='N'&&el.prdNum==0)">在售</em>
+		                        <i ms-if="(el.sellOut=='Y')">售罄</i>
+		                        <em ms-if="(el.prdNum>0)">{{el.prdNum}}</em>
+		                        </span>
+		                    </a>
+		               </li>     
+		            </ul>
+               </div>
+				<div class="product-funds-safe"><i></i>
+					<a href="security4.html" title="资金安全保障" slide-panel="">资金安全由阳光保险与银行共同保障</a>
+				</div>
+			</div>
+			<div class="index-footer">
+				<a href="javascript:void(0);">关于小牛</a>|
+				<a href="javascript:void(0);">下载APP</a>
+			</div>
+			<div class="index-appdown" id="appDown" style="display: none;">
+				<a href="javascript:;" class="index-appdown-close" id="appDownClose"></a>
+				<div class="meta">
+					<p>小牛在线</p>
+					<p>值得信赖的理财平台</p>
+				</div>
+				<a href="javascript:void(0);" class="download">立即下载</a>
+			</div>
+		</section>
+<script src="swiper/swiper.js"></script>
+
+<!--<script src="js/vue-resource.js"></script>-->
+<script src="js/zepto.js"></script>
+<script src="js/avalon.js"></script>
+<script src="js/home.js"></script>
+</body>
+</html>

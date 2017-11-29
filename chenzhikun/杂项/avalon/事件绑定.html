@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+</head>
+<body ms-controller="root">
+	<button ms-click="test(222)">click</button>
+</body>
+
+<script src="../js/avalon.js"></script>
+<script>
+	var vm = avalon.define({
+		$id: 'root',
+		test: function(num) {
+			alert(num);
+		}
+	});
+	avalon.scan();
+	
+	
+</script>
+
+
+</html>

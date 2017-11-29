@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="avalon.js"></script>
+</head>
+<body ms-controller="root">
+<h3>测试ms-visible 和 ms-if</h3>
+<p ms-visible="mv">ms-visible</p>
+<p ms-if="mi">ms-if</p>
+
+<script>
+    var vm = avalon.define({
+        $id: 'root',
+        mv: true,
+        mi: true
+    });
+    // ms-visible 隐藏元素
+    // vm.mv = false;
+    // ms-if 移除元素
+    // vm.mi = false;
+
+
+</script>
+</body>
+</html>

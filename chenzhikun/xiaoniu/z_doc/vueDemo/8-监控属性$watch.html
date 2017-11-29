@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    <div id="app">
+        <input v-model="num">
+        <p>{{doubleNum}}</p>
+    </div>
+
+<script src="vue.js"></script>
+<script>
+    var vm = new Vue({
+        el: '#app',
+        data: {
+            num: 123,
+            doubleNum: 246
+        },
+        watch: {
+            num: function(num) {
+                this.doubleNum = '你好';
+            }
+        }
+    })
+</script>
+</body>
+</html>

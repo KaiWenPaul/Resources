@@ -1,0 +1,56 @@
+一,介绍和核心概念
+1,框架和库,框架和库的区别
+http://blog.sina.com.cn/s/blog_732ae613010155gj.html
+简单来讲: 框架就是框架，一套机制，大家遵循这套机制做事。
+而库,也叫类库,是一些类的集合(类-分类),类与类之间没太大的关系
+打个简单的比喻:咱们学校就是一个框架,它是一套完整的机制从招生,到教学,到就业一整套
+而学校里面的教学体系由ui,web,测试,java等组成,ui可以看做是一类,web可以看做是一类,学校的教学体系就是由这些类组成,
+类与类之间没太大关系,所以这个教学体系就是个类库.
+mvc框架 backbone.js angular.js
+Model（模型）——View（视图）——Controller（控制器）
+在Web程序中可以将视图理解为浏览器，服务器端组件为控制器，模型即为业务逻辑模块(就是我们平时写的那个js)
+MVC的处理过程:
+首先控制器接收用户的请求，并决定应该调用哪个模型来进行处理，然后模型用业务逻辑来处理用户的请求并返回数据，
+最后控制器用相应的视图格式化模型返回的数据，并通过表示层呈现给用户。
+2,avalon框架
+MVC框架 backbone.js  angular.js
+MVVM框架: angular.js avalon.js vue.js knockout.js
+3,MVVM双向绑定原理 setter 和 getter
+4,avalon作用域
+5,avalon的核心方法 define scan
+6,文档和视频
+1) 教程: http://www.cnblogs.com/rubylouvre/p/3181291.html
+2) 文档: http://avalonjs.github.io/
+3) 视频: http://www.imooc.com/index/search?words=avalon
+7,avalon三个版本
+  * avalon.js
+  兼容IE6及其他浏览器。需要严格遵守先定义后使用的规则。
+  * avalon.modern.js
+  兼容IE10及其他浏览器。它使用一些新API,以提高性能及获取更小的体积。
+  * avalon.mobile
+  运行于手机端。只是在avalon.modern.js加上触屏事件的支持。
+
+二,avalon需要掌握的知识点
+1. 视图模型 和 数据模型mvvm的概念
+2. 作用域
+3. 扫描
+4. 数据填充 {{}} ms-text ms-html
+5. 类名切换(ms-class, ms-hover, ms-active)
+6. 事件绑定(ms-on，……)
+7. 显示绑定(ms-visible)
+8. 插入绑定(ms-if)
+9. 双工绑定(ms-duplex)
+10. 样式绑定(ms-css)
+// 11. 数据绑定(ms-data)
+12. 属性绑定(ms-attr)
+13. 循环绑定(ms-repeat)
+14. $model 读取对象的原始数据
+15. $watch 监控vm的某个属性
+16. 过滤器
+
+接口文档:
+http://jehovah.com.cn/interface/doc/ins_xiaoniu.html
+项目需求演示:
+http://192.168.2.199:8888/xiaoniu/html/home.html
+
+

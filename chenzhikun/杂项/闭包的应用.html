@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<p>
+    <button id="btn">click me</button>
+</p>
+<p id="num"></p>
+
+<script>
+    var view = {
+        init: function() {
+            this.bindEvents();
+        },
+
+        bindEvents: function() {
+            var btn = document.querySelector('#btn');
+            var count = 0;
+            btn.onclick = function() {
+                document.querySelector('#num').innerText = ++count;
+            }
+        }
+    };
+    view.init();
+
+
+</script>
+
+</body>
+</html>

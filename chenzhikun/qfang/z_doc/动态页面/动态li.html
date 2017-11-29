@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        ul {width: 200px;list-style: none;margin: 0 auto;}
+        li {border: 1px solid;text-align: center;}
+    </style>
+</head>
+<body>
+<ul id="list">
+
+</ul>
+
+<script src="jquery-2.1.1.js"></script>
+<script>
+    var flowerList = ["月季花","梅花","桃花","菊花","牡丹花","玫瑰花","月季","没钱花"];
+    var htmlStr = '';
+    for (var i=0;i<flowerList.length;i++) {
+        htmlStr += '<li>' + flowerList[i] + '</li>';
+    }
+    $('#list').html(htmlStr);
+</script>
+</body>
+</html>

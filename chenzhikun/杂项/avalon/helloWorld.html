@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+</head>
+<body ms-controller="root">
+	<h3>{{msg}}</h3>
+	
+	
+<script src="avalon.js"></script>
+<script>
+	// 定义一个avalon的数据模型 
+	var vm = avalon.define({
+		$id: 'root',
+		msg: 'hello world'
+	});
+	avalon.scan();
+	
+</script>
+</body>
+</html>

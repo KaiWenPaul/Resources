@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+
+    </style>
+    <link rel="stylesheet" href="../dist/css/swiper.min.css">
+</head>
+<body><div class="swiper-container swiper-container-horizontal" id="swiper-container2" style="height:300px;">
+    <div class="swiper-wrapper" style="transition-duration: 0ms; transform: translate3d(-800px, 0px, 0px);">
+        <div class="swiper-slide blue-slide swiper-slide-prev" style="width: 800px;">
+            slider1</div>
+        <div class="swiper-slide red-slide swiper-slide-active" style="width: 800px;">
+            slider2</div>
+        <div class="swiper-slide orange-slide swiper-slide-next" style="width: 800px;">
+            slider3</div>
+    </div>
+    <div class="swiper-scrollbar"><div class="swiper-scrollbar-drag" style="transition-duration: 0ms; transform: translate3d(261.333px, 0px, 0px); width: 261.333px;"></div></div>
+</div>
+<script src="../dist/js/swiper.min.js"></script>
+<script>
+    var swiper = new Swiper('.swiper-container', {
+        scrollbar: '.swiper-scrollbar',
+        direction: 'vertical'
+    });
+</script>
+</body>
+</html>

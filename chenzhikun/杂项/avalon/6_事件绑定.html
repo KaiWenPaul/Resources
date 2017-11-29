@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="../js/avalon.js"></script>
+</head>
+<h3>click事件,其他事件自己尝试</h3>
+<body ms-controller="root">
+<button ms-click="test">click me</button>
+<button ms-click="test2('001')">001</button>
+<button ms-click="test2('002')">002</button>
+
+<script>
+    var vm = avalon.define({
+        $id: 'root',
+        test: function() {
+            alert('test');
+        },
+        // 可以传参数
+        test2: function(num) {
+            alert(num);
+        }
+    });
+    avalon.scan();
+</script>
+</body>
+</html>

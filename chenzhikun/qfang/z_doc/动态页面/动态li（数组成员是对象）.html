@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        ul {
+            width: 200px;
+            list-style: none;
+            margin: 0 auto;
+        }
+
+        li {
+            border: 1px solid;
+            margin-top: 10px;
+            text-align: center;
+        }
+
+        span {
+            display: inline-block;
+            width: 60px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<ul id="list">
+  
+</ul>
+<script src="jquery-2.1.1.js"></script>
+<script>
+	var flowerList = [
+    {flowerName: "梅花", address: "梅州"},
+    {flowerName: "桃花", address: "广州"},
+    {flowerName: "菊花", address: "四川"},
+    {flowerName: "牡丹花", address: "关东"},
+    {flowerName: "玫瑰花", address: "陕西"},
+    {flowerName: "月季", address: "江西"},
+    {flowerName: "没钱花", address: "东北"}
+    ];
+   var htmlStr="";
+    for (var i=0;i<flowerList.length;i++) {
+        htmlStr += '<li><span>'+flowerList[i].flowerName
+        +'</span>===&gt;<span>'+flowerList[i].address
+        +'</span></li>';
+    }
+    $('#list').html(htmlStr);
+</script>
+</body>
+</html>

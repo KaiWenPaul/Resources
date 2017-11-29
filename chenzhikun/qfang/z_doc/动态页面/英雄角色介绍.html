@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <style>
+        td {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<table border="1" align="center" width="500">
+	<thead>
+    		<tr>
+            <th>英雄名称</th>
+            <th>英雄类型</th>
+            <th>技能Q</th>
+            <th>技能W</th>
+        </tr>
+    	</thead>
+    <tbody id="role-list">
+    </tbody>
+    <script src="jquery-2.1.1.js"> </script>
+    <script>   	
+	    var roleList = [
+		    {heroName: "亚托克斯",heroType:"战士",skill1: "鲜血魔井",skill2: "黑暗之跃"},
+		    {heroName: "阿狸",heroType:"法师",skill1: "摄魂夺魄",skill2: "欺诈宝珠"},
+		    {heroName: "艾克",heroType:"刺客",skill1: "Z型驱动共振",skill2: "时间卷曲器"},
+		    {heroName: "阿利斯塔",heroType:"坦克",skill1: "践踏",skill2: "大地粉碎"},
+		    {heroName: "艾希",heroType:"射手",skill1: "冰霜射击",skill2: "射手的专注"}
+	     ];
+		var htmlStr='';
+		for (var i=0;i<roleList.length;i++){
+			htmlStr+='<tr><td>'+roleList[i].heroName+ '</td><td>'+roleList[i].heroType+'</td> <td>'+roleList[i].skill1+'</td><td>'+roleList[i].skill2+'</td> </tr>'
+		}
+		 $("#role-list").html(htmlStr);
+    </script>
+    
+</table>
+</body>
+</html>

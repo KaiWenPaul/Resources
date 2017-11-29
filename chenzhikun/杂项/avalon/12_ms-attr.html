@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+</head>
+<body ms-controller="root">
+	<img ms-attr-src="url"/>
+	
+<script src="js/avalon.js"></script>	
+<script>
+	var vm = avalon.define({
+		$id: 'root',
+		url: 'https://www.baidu.com/img/bd_logo1.png'
+	});
+	avalon.scan();	
+</script>
+</body>
+</html>

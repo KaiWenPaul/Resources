@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+</head>
+<body>
+<script src="jquery.js"></script>	
+<script>
+	// jq的方法 dataType为jsonp
+    $.ajax({
+        url: 'http://127.0.0.1/interface/other/queryClass_jsonp.php',
+        type: 'get',        
+        dataType: 'jsonp',
+        success: function(res) {
+            debugger;
+        }
+    });
+</script>	
+</body>
+</html>

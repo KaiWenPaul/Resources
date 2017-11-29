@@ -1,0 +1,52 @@
+<meta charset="UTF-8">
+<script>
+    // 动物的构造方法
+   
+    function Animal() {
+        this.color = '白色';
+        this.age = 100;
+    }
+    Animal.prototype.say = function() {
+        console.log('我是动物');
+    }
+    var a = new Animal();
+    // console.log(a);
+
+    // 狗的构造方法
+    function Dog() {
+        this.name = '旺财';
+        this.sex = '公狗';
+    }
+//   Dog.prototype = a;
+    Dog.prototype = new Animal();
+    var dog = new Dog();
+    // console.log(dog);
+
+    // 原型继承：让狗的原型等于动物的一个实例
+    // 原型链 hasOwnProperty从哪里来的
+    for (var p in dog) {
+        if (dog.hasOwnProperty(p)) {
+            console.log(p);
+        }
+    }
+
+    function Cat() {
+        this.age = 22;
+    }
+    // 判断一个对象是否是由某个构造方法构造
+    console.log('dog的原型', dog.__proto__);
+    console.log('dog的原型的原型', dog.__proto__.__proto__);
+    console.log('dog的原型的原型的原型', dog.__proto__.__proto__.__proto__);
+    console.log(dog.__proto__.__proto__.__proto__ === Object.prototype);
+    // console.log('dog的原型的原型的原型的原型', dog.__proto__.__proto__.__proto__.__proto__);
+    var obj = new Object();
+    var arr = [];
+    var date = new Date();
+    var num = new Number(222);
+    arr.__proto__.__proto__ === date.__proto__.__proto__;   // true
+    arr.__proto__.__proto__ === num.__proto__.__proto__;    // true
+    arr.__proto__.__proto__ === obj.__proto__;  // true
+
+
+
+</script>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+</head>
+<body ms-controller="root">
+<p><input ms-duplex="msg"></p>	
+<p>{{aa}}</p>
+	
+<script src="avalon.js"></script>	
+<script>
+	var vm = avalon.define({
+		$id: 'root',
+		msg: 123,
+		aa: 246
+	});
+	avalon.scan();
+	vm.$watch('msg', function(msg) {
+		this.aa = msg * 2;
+	});
+	
+	
+</script>
+</body>
+</html>

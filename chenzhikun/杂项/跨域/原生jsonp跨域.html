@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+</head>
+<body>
+	
+<script>
+	// jsonp跨域原生写法
+   var script = document.createElement('script');
+    script.src = 'http://jehovah.com.cn/interface/other/queryClass_jsonp.php?callback=test';
+    document.body.appendChild(script);
+    
+    function test(res) {
+        console.log(res);
+    }
+</script>	
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        h3 {border: 1px solid;}
+    </style>
+    <script src="avalon.js"></script>
+</head>
+<body ms-controller="root">
+<button ms-click="test">点我试试</button>
+<h3 ms-css-width="www">测试ms-css</h3>
+
+<script>
+    var vm = avalon.define({
+        $id: 'root',
+        www: 200,
+        test: function() {
+            vm.www += 20;
+        }
+    });
+</script>
+</body>
+</html>

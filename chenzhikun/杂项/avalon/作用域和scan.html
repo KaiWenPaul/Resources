@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+</head>
+<!--定义作用范围-->
+<body>
+	{{userName}}
+	<h3>{{userName}}</h3>
+	<div ms-controller="root">
+		<p>{{userName}}</p>
+		<b>{{ "abcdefg" | uppercase }}</b>
+	</div>
+	
+<script src="../js/avalon.js"></script>	
+<script>
+	// 定义一个数据模型
+	var vm = avalon.define({
+		$id: 'root',
+		userName: '张三'
+	});
+	// 扫描
+	avalon.scan();
+</script>
+</body>
+</html>

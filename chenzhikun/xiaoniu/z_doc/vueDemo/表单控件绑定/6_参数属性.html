@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+</head>
+<body>
+	<div id="app">
+		<!-- 将用户的输入转换成数字格式 -->
+		手机号码: <input v-model="phone" number/><br />
+		<!-- 延迟改变数据的值 -->
+		用户名: <input v-on:input="test" v-model="userName" debounce="3000"/>
+	</div>
+	
+	
+	<script src="../vue.js"></script>
+	<script>
+		var vm = new Vue({
+			el: '#app',
+			data: {
+				userName: '',
+				phone: '138000000'
+			},
+			methods: {
+				test: function() {
+					console.log('现在的值:' + vm.userName);
+					setTimeout(function() {
+						console.log('10秒后的值:' + vm.userName);
+					},3000);
+				}
+			}
+		});
+	</script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<div id="loading" style="display: none;position: absolute;">
+    <img src="http://img.zcool.cn/community/0119825540f0dc0000002b01b9629b.jpg">
+</div>
+
+<script src="jquery.js"></script>
+<script>
+    var $loading = $('#loading');
+    /*$.ajaxSettings.type = 'GET';
+    // 发送前
+    $.ajaxSettings.beforeSend = function() {
+        $loading.show();
+    }
+    $.ajaxSettings.complete = function() {
+        setTimeout(function() {
+            $loading.hide();
+        },2000)
+    }*/
+
+    $.extend($.ajaxSettings, {
+        type: 'POST',
+        beforeSend: function() {
+            $loading.show();
+        },
+        complete: function() {
+            setTimeout(function() {
+                $loading.hide();
+            },2000)
+        }
+    });
+    $.ajax({
+        url: 'test.json',
+        data: {},
+        dataType: 'text',
+        success: function(res) {
+            $('body').append(res);
+        }
+    });
+</script>
+</body>
+</html>

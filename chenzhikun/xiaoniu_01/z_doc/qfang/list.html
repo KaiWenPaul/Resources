@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<!-- saved from url=(0036)http://m.qfang.com/shenzhen/info/all -->
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="format-detection" content="email=no">
+    <meta name="format-detection" content="address=no;">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="copyright" content="Copyright www.qfang.com. All Rights Reserved">
+    <link href="http://m.qfang.com/themes/default/images/Qfang-114x114.png" rel="apple-touch-icon-precomposed">
+    <link rel="shortcut icon" href="http://m.qfang.com/themes/default/images/favicon.ico">
+    <title>深圳房产资讯_深圳房地产资讯-深圳Q房网移动站点</title>
+    <link rel="stylesheet" href="./css/mreset.css">
+    <link rel="stylesheet" href="./css/mqfang.css">
+</head>
+<body class="has_panel" id="app">
+<div class="layer-package">
+    <header class="qfang_head">
+        <div class="qfang_head_left">
+            <a href="#">
+                <p class="qfang_logo fl"></p>
+            </a>
+        </div>
+        <span class="head_title">Q房资讯</span>
+
+        <div class="qfang_head_right qfang_head_right_nouser" style="">
+            <div class="menu" id="menu" style="display: inline-block;"></div>
+        </div>
+    </header>
+</div>
+<section class="side_nav" id="side_nav">
+    <div class="side_nav_inner">
+        <div class="side_nav_item">
+            <ul>
+                <li>找房子</li>
+                <li><a href="javascript:;" id="go_home" class="home"><i></i><span>首页</span></a></li>
+                <li class="link"><a href="javascript:void(0);" url="/shenzhen/sale" class="sale"><i></i><span>二手房</span></a>
+                </li>
+                <li class="link"><a href="javascript:void(0);" url="/shenzhen/newhouse"
+                                    class="newhouse"><i></i><span>新房</span></a></li>
+                <li class="link"><a href="javascript:void(0);" url="/shenzhen/rent" class="rent"><i></i><span>出租房</span></a>
+                </li>
+                <li class="link"><a href="javascript:void(0);" url="/shenzhen/office/rent" class="office"><i></i><span>写字楼</span></a>
+                </li>
+                <li class="link"><a href="javascript:void(0);" url="/shenzhen/garden"
+                                    class="garden"><i></i><span>小区</span></a></li>
+                <li class="link"><a href="javascript:void(0);" url="/shenzhen/school"
+                                    class="scholar"><i></i><span>学区房</span></a></li>
+                <li class="link"><a href="javascript:void(0);" url="/shenzhen/sellers"
+                                    class="sellers"><i></i><span>卖房</span></a></li>
+                <li class="link"><a href="javascript:void(0);" url="/shenzhen/groupbuy"
+                                    class="group"><i></i><span>团购</span></a></li>
+            </ul>
+        </div>
+        <div class="side_nav_item">
+            <ul>
+                <li>房产信息</li>
+                <li><a href="http://m.qfang.com/shenzhen/info" class="news"><i></i><span>资讯</span></a></li>
+            </ul>
+        </div>
+        <div class="side_nav_item">
+            <ul>
+                <li>我的记录</li>
+                <li><a href="http://m.qfang.com/shenzhen/history" class="history"><i></i><span>历史记录</span></a></li>
+            </ul>
+        </div>
+        <div class="side_nav_item">
+            <ul>
+                <li>其它</li>
+                <li><a href="http://m.qfang.com/shenzhen/about" class="about"><i></i><span>关于Q房</span></a></li>
+            </ul>
+        </div>
+    </div>
+</section>
+<section id="tips" class="tips_mask"></section>
+<div class="mask_layer" id="mask_layer"></div>
+<section class="slide-tabs">
+    <ul id="info-tbs">
+        <li class="current" v-bind:class="{current:tap=='01'}"><span><a v-on:click="changTap('01')">百科</a></span></li>
+        <li v-bind:class="{current:tap=='02'}"><span><a v-on:click="changTap('02')">政策</a></span></li>
+        <li v-bind:class="{current:tap=='03'}"><span><a v-on:click="changTap('03')">专题</a></span></li>
+        <li v-bind:class="{current:tap=='04'}"><span><a v-on:click="changTap('04')">人物</a></span></li>
+    </ul>
+</section>
+<div class="page-news" style="overflow: auto;">
+    <div class="page_inner history_lists_inner" id="info_lists_inner"
+         style="transition-timing-function: cubic-bezier(0.1, 0.57, 0.1, 1); transition-duration: 0ms; transform: translate(0px, 0px) translateZ(0px);">
+        <div style="display:block;">
+            <div class="banner" id="banner" style="opacity: 1;">
+                <ul>
+                    <li style="width: 100%;">
+                        <a href="#">
+                            <img id="topImg">
+
+                            <p id="disc"></p></a></li>
+                </ul>
+            </div>
+            <section class="list-news" data_info_type="all" data_next_page="2">
+                <ul>
+                    <li v-for="item in list" v-on:click="toDetail(item)"><a>
+                        <div class="list-pic"><img v-bind:src="item.imgUrl"></div>
+                        <div class="list-text"><h3 v-text="item.title"></h3>
+                            <p>
+                                上海、深圳相继出台的地方性房地产市场调控政策并不是房地产政策工具发挥作用的阶段性完结。在与四个特大型城市积极沟通要求必须确保房地产市场稳定的同时，作为房地产的主管部门，住房和城乡建设部又将目光盯准了房地产中介机构。</p>
+                        </div>
+                        <div class="clearfix"></div>  </a>
+                    </li>
+
+                </ul>
+            </section>
+        </div>
+    </div>
+</div>
+<section class="back_top" id="back_top"></section>
+<div class="List" id="PageType"></div>
+<div class="Shenzhen" id="PageCity"></div>
+<div class="Info" id="BusiType"></div>
+<script src="js/zepto.js"></script>
+<script src="js/vue.js"></script>
+<script src="js/list.js"></script>
+</body>
+</html>

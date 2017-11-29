@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>遍历对象属性</title>
+</head>
+<body>
+	<div id="app">
+		<p v-for="v in obj">
+			{{$key}} -- {{v}}
+		</p>
+	</div>
+	
+	<script src="vue.js"></script>
+	<script>
+		var vm = new Vue({
+			el: '#app',
+			data: {
+				obj: {
+					name: 'zhang',
+					age: 22,
+					hobby: 'basketball'
+				}
+			}
+		})
+	</script>
+</body>
+</html>

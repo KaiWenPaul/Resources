@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+</head>
+<body ms-controller="root">
+	<p>今天:　{{toDay | date("yyyy")}}</p>	
+	<p>今天:　{{toDay | date('fullDate')}}</p>	
+	<p>保留一位数字 {{num | number(2)}}</p>
+	<p>保留一位数字 {{num | number(0)}}</p>
+	<p>小写转大写{{str | uppercase}}</p>
+	<p>大写转小写{{str2 | lowercase}}</p>
+	
+<script src="avalon.js"></script>	
+<script>
+	var vm = avalon.define({
+		$id: 'root',
+		toDay: '2016-07-29',
+		num: 123456.2118,
+		str: 'abcdef',
+		str2: 'AASDFASDFASDFASDF'
+	});
+	avalon.scan();
+</script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="avalon.js"></script>
+    <style>
+        li {
+            border: 1px solid;
+            height: 50px;
+            width: 300px;
+            margin-top: 10px;
+            list-style: none;
+            line-height: 50px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body ms-controller="root">
+<ol>
+    <li ms-repeat="list" ms-visible="$index!==2">
+        姓名: {{el.name}} 年龄: {{el.age}}----{{$index}}
+    </li>
+</ol>
+<script>
+
+    var vm = avalon.define({
+        $id: 'root',
+        listName: '通讯录',
+        list: [
+            {name: '张三', age: 20},
+            {name: '李四', age: 30},
+            {name: '王五', age: 40},
+            {name: '陈六', age: 50}
+        ]
+    });
+</script>
+
+
+</body>
+</html>

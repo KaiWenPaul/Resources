@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="../dist/css/swiper.css">
+    <style>
+        .swiper-container {
+            border: 1px solid;
+        }
+        .swiper-wrapper {
+            height:200px;
+        }
+        .swiper-slide {
+            height:200px;
+            text-align: center;
+            line-height: 200px;
+            font-weight: bold;
+            color: #ffffff;
+        }
+    </style>
+</head>
+<body>
+<div class="swiper-container">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="../images/1b.jpg"></div>
+        <div class="swiper-slide"><img src="../images/2b.jpg"></div>
+        <div class="swiper-slide"><img src="../images/3b.jpg"></div>
+        <div class="swiper-slide"><img src="../images/4b.jpg"></div>
+    </div>
+    <!-- 分页器 -->
+    <div class="swiper-pagination"></div>
+    <!-- 滚动条 -->
+    <div class="swiper-scrollbar"></div>
+</div>
+
+<script src="../dist/js/swiper.js"></script>
+<script>
+    var mySwiper = new Swiper('.swiper-container', {
+        pagination: '.swiper-pagination',
+        autoplay: 1000,
+        loop: true
+    })
+</script>
+</body>
+</html>

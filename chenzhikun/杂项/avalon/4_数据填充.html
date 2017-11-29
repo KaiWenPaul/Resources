@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="avalon.js"></script>
+    <script src="js/avalon.js"></script>
+    <style>
+        .wrap {
+            border: 1px solid;
+        }
+
+        p {
+            background-color: rgba(112, 117, 112, 0.11);
+            border-bottom: 1px solid gainsboro;
+        }
+        .ms-controller {visibility: hidden;}
+    </style>
+</head>
+<body>
+<div>
+</div>
+<!--定义作用域-->
+<div ms-controller="root" class="wrap ms-controller">
+    <p>{{name}}</p>
+    <p ms-text="name"></p>
+    <p ms-text="age"></p>
+    <p ms-html="disc"></p>
+</div>
+
+</body>
+<script src="../js/avalon.js"></script>
+<script>
+	// 定义数据模型
+    var vm = avalon.define({
+        $id: 'root',
+        name: 'web1604',
+        age: 22,
+        disc: '<h3><button>click me</button></h3>',
+        list: [1,2,3,4]
+    });
+       avalon.scan();
+//  vm.name = '刘诗诗';
+</script>
+</html>

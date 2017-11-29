@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<style>
+		button,p {font-size:33px;}
+		button {width: 200px;height: 100px;}
+		p { border: 1px solid; height: 100px;}
+	</style>
+</head>
+<body>
+<button id="btn">click me</button>	
+<p id="p1">测试长按</p>	
+<p id="p2">测试划动</p>	
+<script src="zepto.js"></script>	
+<script src="touch.js"></script>
+<script>
+	$('#btn').on('tap', function(ev) {
+		alert(222);
+	});
+	$('#p1').on('longTap', function(ev) {
+		alert('长按');
+	});
+	$('#p2').on('swipe', function(ev) {
+		alert('滑动');
+	});
+</script>
+</body>
+</html>

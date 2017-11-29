@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="../js/avalon.js"></script>
+</head>
+<body ms-controller="root">
+<input ms-duplex="small"><br>
+<p>{{big}}</p>
+
+<script>
+    // 小写数字转大写数字
+   var smallArr = [0,1,2,3,4,5,6,7,8,9];
+    var bigArr = ['零','壹','贰','叁','肆','伍','陆','柒','捌', '玖'];
+    var vm = avalon.define({
+        $id: 'root',
+        small: 222,
+        big: ''
+    });
+
+    /*vm.$watch('small', function(small) {
+        this.big = small * 2;
+    });
+	*/
+    vm.$watch('small', function(str) {
+        var bigStr = '';
+        for(var i=0;i<str.length;i++) {
+            var a = str[i];
+            bigStr += bigArr[a];
+        }
+        this.big = bigStr;
+    }); 
+
+</script>
+</body>
+</html>

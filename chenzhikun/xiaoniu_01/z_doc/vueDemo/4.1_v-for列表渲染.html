@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+</head>
+<body>
+	<div id="app">
+		<ul>
+		  <li v-for="item in flowers">
+		  	<!-- $index数组下标 -->
+		    {{$index}} -- {{item.flowName}} --> {{item.addr}}
+		  </li>
+		</ul>
+	</div>
+	
+	
+	<script src="vue.js"></script>
+	<script>
+		var list = [
+		 	{flowName: '玫瑰', addr: '上海'},
+		 	{flowName: '月季', addr: '广东'},
+		 	{flowName: '牡丹', addr: '广西'},
+		];
+		var vm = new Vue({
+			  el: '#app',
+			  data: {
+			  	flowers:[{flowName: '玫瑰', addr: '上海'},
+		 	            {flowName: '月季', addr: '广东'},
+		 	            {flowName: '牡丹', addr: '广西'},
+			  	        ]
+			  }
+			})
+		
+	</script>
+</body>
+</html>

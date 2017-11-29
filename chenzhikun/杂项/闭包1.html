@@ -1,0 +1,36 @@
+<meta charset="UTF-8">
+<script>
+    /*function koo() {
+        var a = 3;
+        var b = 4;
+        function foo() {
+            console.log(333);
+        }
+    }*/
+
+    function koo() {
+        var a = 3;
+        var b= 4;
+        var foo = function() {
+            console.log(a);
+            console.log(b);
+        }
+        return foo;
+    }
+
+    var func = koo();
+    function f1(){
+    	var n=999;
+    }
+    f1();
+    alert(n);
+//  func();     // 3;
+
+//  console.log(koo());
+
+
+
+
+
+
+</script>

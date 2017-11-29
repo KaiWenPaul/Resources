@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        #wrap {
+            height: 300px;
+            overflow: auto;
+            width: 300px;
+            position: relative;
+        }
+
+        p {
+            background: grey;
+            width: 200px;
+            color: white;
+            font-size: 20px;
+            height: 40px;
+            line-height: 40px;
+            text-align: center;
+        }
+        .loading {
+            position: fixed;
+            top: 300px;
+            display: none;
+            width: 200px;
+            background: green;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<div id="wrap">
+    <p class="loading">努力加载中。。。</p>
+</div>
+
+<script src="jquery-1.11.1.js"></script>
+<script>
+    var count = 0;
+    function addHtml() {
+        var html = '';
+        for(var i=0;i<10;i++) {
+            html += '<p>------'+(++count)+'-------</p>';
+        }
+        $('#wrap').append(html);
+    }
+    $('#wrap').on('scroll',function(ev) {
+        //
+        if (this.scrollTop + this.clientHeight === this.scrollHeight) {
+            $('.loading').show();
+            setTimeout(function() {
+                $('.loading').hide();
+                addHtml();
+            },2000);
+        }
+    });
+    addHtml();
+
+    $.ajax({
+        url: 'http://192.168.5.168:8888/interface/qfang/qfangList.php?tap=01&currentPage=3',
+        dataType: 'json',
+        success: function(res) {
+            console.log(res.currentPage);
+        },error: function() {
+            alert('error');
+        }
+    })
+</script>
+</body>
+</html>

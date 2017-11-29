@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+</head>
+<body>
+	<div id="app">
+		<!--<p v-if="ok">YES</p>
+		<p v-else>No</p>-->
+		<!--<template v-if="ok">
+		  <h1>Title</h1>
+		  <p>Paragraph 1</p>
+		  <p>Paragraph 2</p>
+		</template>
+		<h1 v-show="ok">Hello!</h1>-->
+		
+		<!--<div v-if="ok">
+		  Sorry
+		</div>
+		<div v-else>
+		  Not sorry
+		</div>-->
+		<p v-show="ok">hello word</p>
+        <p v-show="!ok">这可能也是一个组件</p>
+	</div>
+	
+	<script src="vue.js"></script>
+	<script>
+		var vm = new Vue({
+			el: '#app',
+			data: {
+				ok:true
+			}
+		});
+	</script>
+</body>
+</html>

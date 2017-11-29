@@ -1,0 +1,24 @@
+<meta charset="utf-8">
+<script>
+    // 自定义构造方法
+    function Cat() {
+        var a = 3;
+        this.name = '黑猫';
+        this.age = 3;
+    }
+    Cat.prototype.color = '黑色';
+    Cat.prototype.catch = function() {
+        console.log('can catch mouse');
+    }
+    var cat = new Cat();
+    console.log(cat);
+
+    // 访问原型的两种方式
+    Cat.prototype;  // 通过构造方法来访问
+    cat.__proto__;  // 通过实例来访问
+    Cat.prototype === cat.__proto__;    // true
+
+
+
+
+</script>

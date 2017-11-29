@@ -1,0 +1,8 @@
+// 角色列表
+var roleList = [
+    {heroName: "亚托克斯",heroType:"战士",skill1: "鲜血魔井",skill2: "黑暗之跃"},
+    {heroName: "阿狸",heroType:"法师",skill1: "摄魂夺魄",skill2: "欺诈宝珠"},
+    {heroName: "艾克",heroType:"刺客",skill1: "Z型驱动共振",skill2: "时间卷曲器"},
+    {heroName: "阿利斯塔",heroType:"坦克",skill1: "践踏",skill2: "大地粉碎"},
+    {heroName: "艾希",heroType:"射手",skill1: "冰霜射击",skill2: "射手的专注"}
+];

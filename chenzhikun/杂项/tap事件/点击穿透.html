@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="zepto.js"></script>
+		<script src="touch.js"></script>
+		<style>
+			#div1 {position: absolute;height: 300px;width: 300px;background-color: green;}
+			#div2 {height: 500px;width: 400px;background-color: gray;}
+		</style>
+	</head>
+	<body>
+		<div id="div1">div1</div>
+		<div id="div2">div2</div>
+		
+		
+		<script>
+			$('#div1').on('tap', function(ev) {
+				console.log('div1-click');
+				$(this).hide();
+			});
+
+			// 解决点击穿透
+			/*$('#div1').on('tap', function(ev) {
+				console.log('div1-tap');
+				setTimeout(function() {
+					$('#div1').hide();
+				},300);
+			});*/
+
+			$('#div2').on('click', function(ev) {
+				console.log('div2');
+			});
+		</script>
+	</body>
+</html>

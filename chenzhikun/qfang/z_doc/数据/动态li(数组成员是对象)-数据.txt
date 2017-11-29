@@ -1,0 +1,9 @@
+var flowerList = [
+    {flowerName: "梅花", address: "梅州"},
+    {flowerName: "桃花", address: "广州"},
+    {flowerName: "菊花", address: "四川"},
+    {flowerName: "牡丹花", address: "关东"},
+    {flowerName: "玫瑰花", address: "陕西"},
+    {flowerName: "月季", address: "江西"},
+    {flowerName: "没钱花", address: "东北"}
+];
