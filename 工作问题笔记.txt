@@ -1,14 +1,14 @@
-1£¬angular ÓÃÀ´½âÎöhtml±êÇ©£¬Í¨¹ıµ÷ÓÃ$sce·şÎñÀ´ÊµÏÖÕ¹Ê¾
-   $sce.trustAsHtml(text)£»
+1ï¼Œangular ç”¨æ¥è§£æhtmlæ ‡ç­¾ï¼Œé€šè¿‡è°ƒç”¨$sceæœåŠ¡æ¥å®ç°å±•ç¤º
+   $sce.trustAsHtml(text)ï¼›
   <div class="col-md-12 ng-binding" ng-bind-html="item.content ">
 2. Unexpected token o in JSON at position 1
-   Ô­ÒòÊÇ·µ»ØµÄÊı¾İÒÑ¾­ÊÇobjectÀàĞÍ£¬²»ĞèÒªÔÙ½øĞĞJSON.parse()×ª»»ÁË£¬¿ÉÒÔÖ±½Óµ±×÷¶ÔÏóÊ¹ÓÃ
-3. cssÑùÊ½³öÏÖÊ¡ÂÔºÅ
+   åŸå› æ˜¯è¿”å›çš„æ•°æ®å·²ç»æ˜¯objectç±»å‹ï¼Œä¸éœ€è¦å†è¿›è¡ŒJSON.parse()è½¬æ¢äº†ï¼Œå¯ä»¥ç›´æ¥å½“ä½œå¯¹è±¡ä½¿ç”¨
+3. cssæ ·å¼å‡ºç°çœç•¥å·
    white-space:nowrap;
    text-overflow:ellipsis;
    overflow: hidden;
-   ÈıÕßÈ±Ò»²»¿É
-4. ÈÃimgÍ¼Æ¬ÔÚºĞ×ÓÀïË®Æ½´¹Ö±¾ÓÖĞ
+   ä¸‰è€…ç¼ºä¸€ä¸å¯
+4. è®©imgå›¾ç‰‡åœ¨ç›’å­é‡Œæ°´å¹³å‚ç›´å±…ä¸­
    div{
       display:table-cell;
       text-align: center;
@@ -18,10 +18,10 @@
       max-width:100%;
       max-height:100%;
      }
-5.join£¨£©Êı×é×ª×Ö·û´®
-  split£¨£©×Ö·û´®×ªÊı×é
+5.joinï¼ˆï¼‰æ•°ç»„è½¬å­—ç¬¦ä¸²
+  splitï¼ˆï¼‰å­—ç¬¦ä¸²è½¬æ•°ç»„
 
-6.»ñÈ¡urlºóÃæµÄ²ÎÊı
+6.è·å–urlåé¢çš„å‚æ•°
  
    function getQueryVariable(variable)
      {
@@ -33,29 +33,44 @@
        }
        return(false);
      }
-7.É¾³ıÌæ´úÒ»Ğ©×Ö·û´®¿ÉÒÔÓÃreplace()·½·¨
+7.åˆ é™¤æ›¿ä»£ä¸€äº›å­—ç¬¦ä¸²å¯ä»¥ç”¨replace()æ–¹æ³•
 
-8.encodeURL£¨£©²»»á¶ÔÕâĞ©×Ö·û±àÂë  ! @ # $& * ( ) = : / ; ? + '
-  encodeURLCcomponent() ²»»á¶ÔÕâĞ©×Ö·û±àÂë ! * ( ) '
-  ¶ÔÓÚurl´«µİµÄ²ÎÊıÖµÓÃ encodeURLComponent()½øĞĞ±àÂë£¬decodeURIComponent()½øĞĞ½âÂë
-  ¶ÔÓÚÕû¸öurlÓÃencodeURL£¨£©½øĞĞ±àÂë£¬decodeURL£¨£©½øĞĞ½âÂë
-9.gitÌá½»Ô¶³Ì´úÂëÊ¾Àı£º
+8.encodeURLï¼ˆï¼‰ä¸ä¼šå¯¹è¿™äº›å­—ç¬¦ç¼–ç   ! @ # $& * ( ) = : / ; ? + '
+  encodeURLCcomponent() ä¸ä¼šå¯¹è¿™äº›å­—ç¬¦ç¼–ç  ! * ( ) '
+  å¯¹äºurlä¼ é€’çš„å‚æ•°å€¼ç”¨ encodeURLComponent()è¿›è¡Œç¼–ç ï¼ŒdecodeURIComponent()è¿›è¡Œè§£ç 
+  å¯¹äºæ•´ä¸ªurlç”¨encodeURLï¼ˆï¼‰è¿›è¡Œç¼–ç ï¼ŒdecodeURLï¼ˆï¼‰è¿›è¡Œè§£ç 
+9.gitæäº¤è¿œç¨‹ä»£ç ç¤ºä¾‹ï¼š
 
-   ÅäÖÃÓÃ»§ÃûºÍÃÜÂë
+   é…ç½®ç”¨æˆ·åå’Œå¯†ç 
    git config --global user.email "youremail@email.com"
    git config --global user.name "yourname"
 
-   Ìá½»²½Öè
-   git status  ²é¿´µ±Ç°µÄ±ä»¯
-   git add .  (-AËùÓĞ¸ü¸Ä¶¼Ìá½»)
-   git commit -m"Ìá½»ËµÃ÷"
+   æäº¤æ­¥éª¤
+   git status  æŸ¥çœ‹å½“å‰çš„å˜åŒ–
+   git add .  (-Aæ‰€æœ‰æ›´æ”¹éƒ½æäº¤)
+   git commit -m"æäº¤è¯´æ˜"
    git push
 
-10.str.startWith() ÓÃÓÚÅĞ¶Ï×Ö·û´®Í·²¿
+10.str.startWith() ç”¨äºåˆ¤æ–­å­—ç¬¦ä¸²å¤´éƒ¨
 
-   str.endWith()  ÓÃÓÚÅĞ¶Ï×Ö·û´®µÄÎ²²¿
+   str.endWith()  ç”¨äºåˆ¤æ–­å­—ç¬¦ä¸²çš„å°¾éƒ¨
  
-  Àı£ºvar str = "json={"name":"paul"}"
+  ä¾‹ï¼švar str = "json={"name":"paul"}"
       if(str.startWith('json=')){
          console.log(123)
       }
+
+11.ejs çš„æ ‡ç­¾ç³»ç»Ÿéå¸¸ç®€å•ï¼Œå®ƒåªæœ‰ä»¥ä¸‹ä¸‰ç§æ ‡ç­¾ï¼š
+
+    <% code %>ï¼šJavaScript ä»£ç ã€‚
+    <%= code %>ï¼šæ˜¾ç¤ºæ›¿æ¢è¿‡ HTML ç‰¹æ®Šå­—ç¬¦çš„å†…å®¹ã€‚
+    <%- code %>ï¼šæ˜¾ç¤ºåŸå§‹ HTML å†…å®¹ã€‚
+
+    ä¾‹ï¼š
+      <%- include header %>
+        <ul>
+        <% for(var i=0; i<supplies.length; i++) {%>
+          <li><%= supplies[i] %></li>
+        <% } %>
+        </ul>
+      <%- include footer %>
