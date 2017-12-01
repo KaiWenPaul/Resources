@@ -9,6 +9,12 @@
 //			common.clearCar();
 			this.queryList(false);
 			this.bindEvents();
+			this.test('name','paul');
+		},
+		test:function(arr,brr){
+			var param ={};
+			param[arr] = brr;
+			console.log(param);
 		},
 		bindEvents:function(){
 			var self=this;

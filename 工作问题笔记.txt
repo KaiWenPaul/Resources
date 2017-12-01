@@ -74,3 +74,14 @@
         <% } %>
         </ul>
       <%- include footer %>
+
+11. js 一个对象的属性名是一个变量如何设置和获取值
+   *不能是变量的时候
+    var obj = {};
+    obj.setAttrName = 'Paul'
+    *可以是变量
+    function(arr,brr){
+     var obj = {};
+     obj[arr] = brr;
+    }
+    console.log('name','paul') =  {name:'paul'}
