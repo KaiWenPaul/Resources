@@ -13,7 +13,9 @@
 		},
 		test:function(arr,brr){
 			var param ={};
-			param[arr] = brr;
+			var obj = {};
+			obj[arr] = brr;
+			param.str = obj;
 			console.log(param);
 		},
 		bindEvents:function(){
