@@ -115,3 +115,19 @@
   15. iframe高度自适应的6个方法
     详细看链接
     http://caibaojian.com/iframe-adjust-content-height.html
+
+  16.vue引入JQ的方法
+     首先npm install jquery --save
+     然后在webpack.base.conf.js文件下开头加
+     var webpack = require("webpack") //这是我们添加的
+     然后到下面的module.exports内部加入
+         plugins: [
+          new webpack.optimize.CommonsChunkPlugin('common.js'),
+          new webpack.ProvidePlugin({
+              jQuery: "jquery",
+              $: "jquery"
+          })
+         ]
+       最后在main.js引入
+       import $ from 'jqery'
+
