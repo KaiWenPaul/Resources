@@ -130,4 +130,18 @@
          ]
        最后在main.js引入
        import $ from 'jqery'
+  17.自适应不同手机分辨率的网页：
+    <1>利用@media screen针对不同的分辨率调用不同的样式文件
+    <2>利用body的zoom属性，对网页进行缩放
+    <3>使用viewport的initial-scale值，对网页进行缩放
 
+  利用zoom进行网页自适应的方法：首先根据ui设计的尺寸例如375px或者750px，按照图片上设计的尺寸是多少就写多少
+  但必须整个网页都要采用px作为单位
+    在编写的网页上加载一段缩放脚本，脚本必须在页面加载完成时执行，例如jq版：
+    $(window).bind('resize load', function() {
+        $("body").css("zoom", $(window).width() / 640);
+        $("body").css("display", "block");
+        $("body").css("zoom", $(window).width() / 640);
+    });       
+    然后修改meta标签中的viewport的定义：
+    <meta name="viewport" content="width=640, maximum-scale=1.0, user-scalable=no"/>
